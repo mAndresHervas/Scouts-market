@@ -1,0 +1,13 @@
+# Archivos de VS
+.vs/
+*.user
+*.suo
+
+# Archivos de build
+bin/
+obj/
+*.log
+
+# Config local
+sqlserver/
+.env
