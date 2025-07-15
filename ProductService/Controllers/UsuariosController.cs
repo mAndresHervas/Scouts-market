@@ -16,11 +16,10 @@ namespace ProductService.Controllers
                 _context = context;
             }
 
-            [HttpPost("register")]
+            [HttpPost("register.html")]
             public async Task<IActionResult> Register(UsuariosController dto)
             {
-                
-            // Aquí haces:
+               
             // 1. Validaciones (¿email ya registrado?)
             // 2. Hasheo de contraseña
             // 3. Guardar en la DB
