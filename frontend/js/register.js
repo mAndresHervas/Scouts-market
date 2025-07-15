@@ -7,11 +7,12 @@ document.getElementById("registerForm").addEventListener("submit", async (e) => 
   const tipoUsuario = document.getElementById("tipoUsuario").value;
 
   try {
-    const response = await fetch("http://localhost:8000/frontend/register.html", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ nombre, email, password, tipoUsuario }),
-    });
+const response = await fetch("http://localhost:5000/api/usuarios/register", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ nombre, email, password, tipoUsuario }),
+});
+
 
     const data = await response.json();
 

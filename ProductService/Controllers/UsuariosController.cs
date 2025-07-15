@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ProductService.DataBack;
+using ProductService.Dtos;
 using ProductService.Models;
 
 namespace ProductService.Controllers
@@ -16,10 +17,10 @@ namespace ProductService.Controllers
                 _context = context;
             }
 
-            [HttpPost("register.html")]
-            public async Task<IActionResult> Register(UsuariosController dto)
+            [HttpPost("register")]
+            public async Task<IActionResult> Register(UsuarioRegisterDto usuarioRegisterDto)
             {
-               
+               Console.WriteLine("Registro de usuario iniciado...");
             // 1. Validaciones (¿email ya registrado?)
             // 2. Hasheo de contraseña
             // 3. Guardar en la DB
