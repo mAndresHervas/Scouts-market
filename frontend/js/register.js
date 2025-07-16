@@ -3,8 +3,8 @@ document.getElementById("registerForm").addEventListener("submit", async (e) => 
 
   const Nombre = document.getElementById("nombre").value;
   const Email = document.getElementById("email").value;
-  const Contrasena = document.getElementById("password").value;
-  const TipoUsuario = document.getElementById("tipoUsuario").value;
+  const Contrasena = document.getElementById("ContrasenaHash").value;
+  const TipoUsuario = document.getElementById("TipoUsuario").value;
 
   try {
     const response = await fetch("http://localhost:5200/api/usuarios/register", {

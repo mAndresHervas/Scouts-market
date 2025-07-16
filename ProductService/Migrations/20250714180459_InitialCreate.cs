@@ -20,7 +20,6 @@ namespace ProductService.Migrations
                     Nombre = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     Email = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     PasswordHash = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    EsGrupo = table.Column<bool>(type: "bit", nullable: false),
                     Rama = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
                     FechaRegistro = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },

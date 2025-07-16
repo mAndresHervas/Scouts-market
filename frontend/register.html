@@ -7,13 +7,14 @@
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
+     <div id="navbar"></div>
   <div class="container">
     <h1>Registro de Usuario</h1>
 <form id="registerForm">
   <input type="text" id="nombre" placeholder="Nombre" required />
   <input type="email" id="email" placeholder="Correo electrónico" required />
-  <input type="password" id="password" placeholder="Contraseña" required />
-  <select id="tipoUsuario" required>
+  <input type="password" id="ContrasenaHash" placeholder="Contraseña" required />
+  <select id="TipoUsuario" required>
     <option value="INDIVIDUAL">Individual</option>
     <option value="GRUPO">Grupo</option>
     <option value="TROPA">Tropa</option>
@@ -29,7 +30,7 @@
 <p id="errorMsg" style="color: red;"></p>
     <p>¿Ya tienes cuenta? <a href="login.html">Inicia sesión aquí</a></p>
   </div>
-
-  <script src="js/register.js"></script>
+<div id="footer"></div>
+  <script src="js/main.js"></script>
 </body>
 </html>

@@ -18,12 +18,10 @@ namespace ProductService.Models
         public string Email { get; set; }
 
         [Required]
-        public string PasswordHash { get; set; }
-
-        public bool EsGrupo { get; set; } // true = grupo scout, false = usuario individual
+        public string ContrasenaHash { get; set; }
 
         [MaxLength(100)]
-        public string? Rama { get; set; } // Tropa, Pioneros, Rovers, etc. Solo si aplica
+        public string? TipoUsuario { get; set; } // Tropa, Pioneros, Rovers, etc. Solo si aplica
 
         public DateTime FechaRegistro { get; set; } = DateTime.UtcNow;
     }

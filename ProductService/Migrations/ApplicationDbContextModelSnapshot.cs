@@ -35,9 +35,6 @@ namespace ProductService.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
-                    b.Property<bool>("EsGrupo")
-                        .HasColumnType("bit");
-
                     b.Property<DateTime>("FechaRegistro")
                         .HasColumnType("datetime2");
 
