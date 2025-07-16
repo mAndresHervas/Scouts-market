@@ -1,22 +1,26 @@
 document.getElementById("registerForm").addEventListener("submit", async (e) => {
   e.preventDefault();
 
-  const nombre = document.getElementById("nombre").value;
-  const email = document.getElementById("email").value;
-  const password = document.getElementById("password").value;
-  const tipoUsuario = document.getElementById("tipoUsuario").value;
+  const Nombre = document.getElementById("nombre").value;
+  const Email = document.getElementById("email").value;
+  const Contrasena = document.getElementById("password").value;
+  const TipoUsuario = document.getElementById("tipoUsuario").value;
 
   try {
-const response = await fetch("http://localhost:5000/api/usuarios/register", {
-  method: "POST",
-  headers: { "Content-Type": "application/json" },
-  body: JSON.stringify({ nombre, email, password, tipoUsuario }),
-});
+    const response = await fetch("http://localhost:5200/api/usuarios/register", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        Nombre,
+        Email,
+        Contrasena,
+        TipoUsuario
+      }),
+    });
 
+    const data = await response.text(); // Puede no ser JSON
 
-    const data = await response.json();
-
-    if (!response.ok) throw new Error(data.message || "Error al registrar");
+    if (!response.ok) throw new Error("Error al registrar");
 
     alert("Registro exitoso, ahora inicia sesión");
     window.location.href = "login.html";
